@@ -18,6 +18,13 @@ To run this project:
 $ git clone git@github.com:bansalsumit/areferralguru.git
 $ cd ./string_calculator_tdd
 $ rvm install 2.7.5
+```
+**Method 1: Running Directly with Ruby**
+```
+$ ruby test_calculator.rb
+```
+**Method 2: Using Docker**
+```
 $ docker build -t string_calculator_tdd
 $ docker run string_calculator_tdd
 ```
