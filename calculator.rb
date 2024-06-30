@@ -1,5 +1,5 @@
 class Calculator
   def add(numbers)
-    numbers.empty? ? 0 : 1
+    numbers.to_i
   end
 end
