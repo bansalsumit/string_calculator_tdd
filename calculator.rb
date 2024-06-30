@@ -1,7 +1,7 @@
 class Calculator
   def add(numbers)
-    numbers.split(',').sum(0) do |val, sum|
-      val.to_i + sum.to_i
+    numbers.split(',').reduce(0) do |sum, val|
+      val.to_i + sum
     end
   end
 end
