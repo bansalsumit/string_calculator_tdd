@@ -36,4 +36,11 @@ class TestCalculator < Test::Unit::TestCase
 
     assert_equal(6, output)
   end
+
+  def test_add_numbers_with_custom_delimiter
+    calculator = Calculator.new
+    output = calculator.add("//;\n1;2") # format "//[delimiter]\n[numbers…]"
+
+    assert_equal(3, output)
+  end
 end
