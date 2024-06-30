@@ -6,13 +6,15 @@ class Calculator
       delimiter = delimiter_line[2..-1]
     end
 
-    negatives = numbers.split(/[\n#{delimiter}]/).select { |num| num.to_i < 0 }
+    numbers = numbers.split(/[\n#{delimiter}]/).map() {|num| num.to_i}
+
+    negatives = numbers.select { |num| num < 0 }
     if negatives.any?
       raise StandardError, "negative numbers not allowed #{negatives.join(', ')}"
     end
 
-    numbers.split(/[\n#{delimiter}]/).reduce(0) do |sum, val|
-      val.to_i > 1000 ? sum : val.to_i + sum
+    numbers.reduce(0) do |sum, num|
+      num > 1000 ? sum : num + sum
     end
   end
 end
