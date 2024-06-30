@@ -57,4 +57,11 @@ class TestCalculator < Test::Unit::TestCase
 
     assert_equal('negative numbers not allowed -2, -7', error.message)
   end
+
+  def test_add_numbers_with_bigger_than_1000
+    calculator = Calculator.new
+    output = calculator.add("1\n2,3\n1001")
+
+    assert_equal(6, output)
+  end
 end
