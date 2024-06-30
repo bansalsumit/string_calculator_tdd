@@ -15,4 +15,11 @@ class TestCalculator < Test::Unit::TestCase
 
     assert_equal(1, output)
   end
+
+  def test_add_single_number
+    calculator = Calculator.new
+    output = calculator.add('8')
+
+    assert_equal(8, output)
+  end
 end
