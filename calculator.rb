@@ -12,7 +12,7 @@ class Calculator
     end
 
     numbers.split(/[\n#{delimiter}]/).reduce(0) do |sum, val|
-      val.to_i + sum
+      val.to_i > 1000 ? sum : val.to_i + sum
     end
   end
 end
