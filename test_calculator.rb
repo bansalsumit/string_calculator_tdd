@@ -43,4 +43,11 @@ class TestCalculator < Test::Unit::TestCase
 
     assert_equal(3, output)
   end
+
+  def test_add_numbers_with_negative_number
+    calculator = Calculator.new
+    error = assert_raises(StandardError) { calculator.add("//;\n1;-2") } # format "//[delimiter]\n[numbers…]"
+
+    assert_equal('negative numbers not allowed -2', error.message)
+  end
 end
