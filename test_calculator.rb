@@ -23,17 +23,17 @@ class TestCalculator < Test::Unit::TestCase
     assert_equal(8, output)
   end
 
-  def test_add_single_number
-    calculator = Calculator.new
-    output = calculator.add('8')
-
-    assert_equal(8, output)
-  end
-
   def test_add_two_numbers
     calculator = Calculator.new
     output = calculator.add('8,7')
 
     assert_equal(15, output)
+  end
+
+  def test_add_numbers_with_newlines
+    calculator = Calculator.new
+    output = calculator.add("1\n2,3")
+
+    assert_equal(6, output)
   end
 end
