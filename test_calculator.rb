@@ -8,4 +8,11 @@ class TestCalculator < Test::Unit::TestCase
 
     assert_equal(0, output)
   end
+
+  def test_add_string_value_1
+    calculator = Calculator.new
+    output = calculator.add('1')
+
+    assert_equal(1, output)
+  end
 end
