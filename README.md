@@ -25,7 +25,7 @@ $ ruby test_calculator.rb
 ```
 **Method 2: Using Docker**
 ```
-$ docker build -t string_calculator_tdd
+$ docker build -t string_calculator_tdd .
 $ docker run string_calculator_tdd
 ```
 
